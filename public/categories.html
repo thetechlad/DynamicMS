@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="categoriesStyle.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <title>Popular Categories</title>
+</head>
+<body>
+    <div class="CategoryContainer">
+        <div class="CCTop">
+            <p class="CategoryCard">Popular Categories</p>
+        </div>
+        <div id="CCBott" class="CCBottom">
+
+        </div>
+    </div>
+    <!-- <div class="CCardText">
+        <p class="CCardTextTitle">UI/UX Design</p>
+        <div class="CCardTextBottom">
+            <p class="CCardTextNumber">24</p>
+            <p class="CCardTextPara">Courses</p>
+        </div>
+    </div>
+    <div class="CCardIcon">
+
+    </div> -->
+    <script>
+
+
+    const colors= [
+        {
+            Background: "#E9DCE5",
+            Filter: "invert(66%) sepia(9%) saturate(7498%) hue-rotate(207deg) brightness(89%) contrast(92%)"
+        },
+        {
+            Background: "#ffcdbf",
+            Filter: "invert(61%) sepia(71%) saturate(3368%) hue-rotate(327deg) brightness(96%) contrast(112%)"
+        },
+        {
+            Background: "#c3eaec",
+            Filter: "invert(62%) sepia(7%) saturate(7472%) hue-rotate(138deg) brightness(92%) contrast(101%)"
+        },
+        {
+            Background: "#e0fde0",
+            Filter: "invert(60%) sepia(49%) saturate(455%) hue-rotate(87deg) brightness(101%) contrast(95%)"
+        }
+
+    ]
+    
+    fetch("CategoryCardData.json").then(response => response.json()).then(data => {   
+            console.log(data)
+            const cardContainer = document.getElementById('CCBott');
+            for (let i = 0; i < data.length; i++) {
+                // console.log(data[i].date)
+                const title = data[i].title;
+                const count = data[i].count;
+                const image = data[i].image;
+
+                console.log(title + '\n' + count + '\n' + image)
+                const card = document.createElement('div');
+                card.className = 'CCard';
+                card.innerHTML = `
+                    <div class="CCardText">
+                        <p class="CCardTextTitle">${title}</p>
+                        <div class="CCardTextBottom">
+                            <p class="CCardTextNumber">${count}</p>
+                            <p class="CCardTextPara">Courses</p>
+                        </div>
+                    </div>
+                    <div class="CCardIcon" style="background-color: ${colors[i].Background}">
+                        <img src="${image}" alt="CourseIcon" width="30px" height="30px" style="filter: ${colors[i].Filter}">
+                    </div>
+                `;
+                cardContainer.appendChild(card);
+            }
+        }) 
+
+    </script>
+</body>
+</html>

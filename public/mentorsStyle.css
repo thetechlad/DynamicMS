@@ -1,0 +1,207 @@
+*{
+    margin: 0px;
+}
+
+.MentorsContainer{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-top: 10px;
+    width: 930px;
+    height: 350px;
+    /* border: 1px solid black; */
+    border-radius: 15px;
+    background-color: #e4f2f7;
+}
+
+.MTop{
+    width: 100%;
+    height: 40px; 
+    /* border: 1px solid blue;  */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TopTitle{
+    margin-left: 15px;
+    font-size: 24px;
+    font-family: Ubuntu;
+    font-weight: 600;
+}
+
+.ContainerBtn{
+    margin-right: 15px;
+    background-color: #e4f2f7;
+    border: none;
+    cursor: pointer;
+}
+
+.BtnText{
+    font-size: 16px;
+    font-family: Ubuntu;
+ 
+}
+
+.ContainerBtn:hover .BtnText{
+    text-decoration: underline;
+}
+
+.MBottomS{
+    width: 100%;
+    height: 300px;
+    /* border: 1px solid red;  */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.MCard{
+    width: 880px; 
+    height: 55px;
+    /* border: 1px solid green; */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    background-color: white;
+}
+.Personal{
+    width: 240px; 
+    height: 100%;
+    /* border: 1px dotted black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /* border: 1px solid black; */
+}
+.Pname{
+    margin-left: 10px;
+    font-size: 16px;
+    font-family: Ubuntu;
+    font-weight: 600;
+}
+.Profile{
+    width: 460px;
+    height: 100%;
+    /* border: 1px dotted blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.Ptitle{
+    width: 150px;
+    height: 100%;
+    /* border: 1px solid purple; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    font-family: Ubuntu;
+    font-size: 16px;
+    color: #A8A8A8;
+
+}
+.Pcourse{
+    width: 150px;
+    height: 100%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.CourseCount{
+    font-family: Ubuntu;
+    font-size: 16px;
+    color: 	#A0A0A0;
+}
+.CourseName{
+    margin-left: 2px;
+    font-family: Ubuntu;
+    font-size: 16px;
+    color: 	#A0A0A0;
+}
+.Pfollower{
+    width: 150px;
+    height: 100%;
+    /* border: 1px solid orangered; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.FollowerCount{
+    font-family: Ubuntu;
+    font-size: 16px;
+    color: 	#A0A0A0;
+}
+.FollowerName{
+    margin-left: 2px;
+    font-family: Ubuntu;
+    font-size: 16px;
+    color: 	#A0A0A0;
+}
+.Contact{
+    width: 180px;
+    height: 100%;
+    /* border: 1px dotted red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.CBtn{
+    margin-left: 15px;
+    width: 80px; 
+    height: 35px;
+    background-color: #FFBF00;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-family: Ubuntu;
+    font-weight: 500;
+}
+.ContactIcon{
+    width: 70px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CMsgIcon{
+    width: 35px;
+    height: 35px;
+    /* border: 1px solid gold; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    background-color: #fff8dc;
+    cursor: pointer;
+}
+.CMoreIcon{
+    width: 25px;
+    height: 35px;
+    /* border: 1px solid gold; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

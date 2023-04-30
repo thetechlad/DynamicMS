@@ -1,0 +1,26 @@
+[
+  {
+    "date": "April 27 2023" ,
+    "image": "./Images/CourseIcon.svg",
+    "title": "Web Design",
+    "subtitle": "Learn the basics of Python programming language.",
+    "para": "Python is a popular high-level programming language used for web development, data analysis, artificial intelligence, and more. This course will teach you the fundamental concepts of Python programming language.",
+    "progress": "80"
+  },
+  {
+    "date": "April 28 2023",
+    "image": "./Images/CourseIcon.svg",
+    "title": "App Design",
+    "subtitle": "Learn the basics of machine learning and its applications.",
+    "para": "Machine learning is a field of artificial intelligence that allows machines to learn and improve from experience. This course will introduce you to the basic concepts of machine learning and its various applications.",
+    "progress": "60"
+  },
+  {
+    "date": "April 29 2023",
+    "image": "./Images/CourseIcon.svg",
+    "title": "Dashboard",
+    "subtitle": "Learn the basics of data science and its tools.",
+    "para": "Data science is a field that deals with extracting knowledge and insights from data. This course will introduce you to the basic concepts of data science and its various tools such as Python, R, SQL, and more.",
+    "progress": "70"
+  }
+]

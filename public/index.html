@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <title>Courses</title>
+
+</head>
+<body>
+
+    <div id="CardContainer" class="CardContainerS">
+        <div class="ContainerTop">
+            <p class="ContainerHead">Course in Progress</p>
+            <button class="ContainerBtn">
+                <span class="BtnText" onclick="AllCourses()">View All</span>
+            </button>
+        </div>
+        <div id="ContainerBottom" class="ContainerBottomS">
+
+        </div>
+    </div>
+    <!-- Sample Card Code -->
+    <!-- <div class="card">
+        <div class="topComponent">
+            <span class="date">Date: 13th Dec' 2020</span>
+            <div class="icon">
+                
+            </div>
+        </div>
+        <div class="text">
+            <p class="title">App Design</p>
+            <p class="head">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque</p>
+            <p class="para">Lorem, ipsum dolor sit amet consectetur asdncdj</p>
+            <input class="progBar" id="slider" type="range" min="0" max="200" value="100" disabled>
+            <div class="sliderInfo">
+                <p class="slText">Progress</p>
+                <p class="slValue">50%</p>
+            </div>
+        </div>
+    </div> -->
+    <script>
+        function AllCourses() {
+            alert('View All Of All Courses was Clicked');
+
+        }
+        const colors= [
+            {
+                Background: "#E9DCE5",
+                Dark: "#9184db",
+                Medium: "#aa8cbb",
+                Filter: "invert(66%) sepia(9%) saturate(7498%) hue-rotate(207deg) brightness(89%) contrast(92%)"
+            },
+            {
+                Background: "#ffcdbf",
+                Dark: "#ff6347",
+                Medium: "#ff9a81",
+                Filter: "invert(61%) sepia(71%) saturate(3368%) hue-rotate(327deg) brightness(96%) contrast(112%)"
+            },
+            {
+                Background:"#c3eaec",
+                Dark: "#00c0c7",
+                Medium: "#81d5d9",
+                Filter: "invert(62%) sepia(7%) saturate(7472%) hue-rotate(138deg) brightness(92%) contrast(101%)"
+            }
+
+        ]
+        fetch("CourseCardData.json").then(response => response.json()).then(data => {
+            console.log(data)
+            const maxLength = 50;
+            const cardContainer = document.getElementById('ContainerBottom');
+            for (let i = 0; i < data.length; i++) {
+                // console.log(data[i].date)
+                const date = data[i].date;
+                const title = data[i].title;
+                const subtitle = data[i].subtitle;
+                const para = data[i].para.substr(0, maxLength) + "...";
+                const image = data[i].image;
+                const progress = data[i].progress;
+
+                console.log(date + '\n' + title + '\n' + subtitle + '\n' + para + '\n' + progress)
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.style.backgroundColor = colors[i].Background
+                card.innerHTML = `
+                    <div class="topComponent">
+                        <div class= "dateComp">
+                            <span class="date" style="color: ${colors[i].Medium}">Date: </span>
+                            <span class="dateVal">${date}</span>
+                        </div>
+                        
+                        <div class="icon">
+                            <img src="${image}" alt="CourseIcon" width="50px" height="50px" style="filter: ${colors[i].Filter}">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p class="title" style="color: ${colors[i].Dark}">${title}</p>
+                        <p class="head">${subtitle}</p>
+                        <p class="para">${para}</p>
+                        <input class="progBar" id="slider" type="range" min="0" value="${progress}" max="100" disabled>
+                        <div class="sliderInfo">
+                            <p class="slText">Progress</p>
+                            <p class="slValue">${progress + "%"}</p>
+                        </div>
+                    </div>
+                `;
+                cardContainer.appendChild(card);
+            }
+        })  
+
+    </script>
+</body>
+</html>

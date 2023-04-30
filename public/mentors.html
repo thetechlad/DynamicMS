@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mentorsStyle.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <title>Top Mentors</title>
+</head>
+<body>
+    <div class="MentorsContainer">
+        <div class="MTop">
+            <p class="TopTitle">Top Mentors</p>
+            <button class="ContainerBtn">
+                <span class="BtnText" onclick="AllMentors()">View All</span>
+            </button>
+        </div>
+        <div id="MBottom" class="MBottomS">
+
+        </div>
+    </div>
+
+    <script>
+        function AllMentors() {
+            alert('View All Of All Mentors was Clicked');
+        }
+        
+
+        fetch("MentorCardData.json").then(response => response.json()).then(data => {
+            console.log(data)
+            const cardContainer = document.getElementById('MBottom');
+            for (let i = 0; i < data.length; i++) {
+                // console.log(data[i].date)
+                const avatar = data[i].avatar;
+                const name = data[i].name;
+                const title = data[i].title;
+                const courseCount = data[i].courseCount;
+                const followerCount = data[i].followerCount;
+
+                // console.log(date + '\n' + title + '\n' + subtitle + '\n' + para + '\n' + progress)
+                const card = document.createElement('div');
+                card.className = 'MCard';
+                card.innerHTML = `
+                    <div class="Personal">
+                        <div class="icon">
+                            <img src="${avatar}" alt="MentorIcon" width="35px" height="35px">
+                        </div>
+                        <p class="Pname">${name}</p>
+                    </div>
+                    <div class="Profile">
+                        <p class="Ptitle">${title}</p>
+                        <div class="Pcourse">
+                            <p class="CourseCount">${courseCount}</p>
+                            <p class="CourseName">Course</p>
+                        </div>
+                        <div class="Pfollower">
+                            <p class="FollowerCount">${followerCount}</p>
+                            <p class="FollowerName">Follower</p>
+                        </div>
+                    </div>
+                    <div class="Contact">
+                        <button class="CBtn">
+                            Follow
+                        </button>
+                        <div class="ContactIcon">
+                            <div class="CMsgIcon">
+                                <img src="./Images/Mail.svg" alt="MailIcon" width="25px" height="25px">
+                            </div>
+                            <div class="CMoreIcon">
+                                <img src="./Images/ThreeDots.svg" alt="SeeMoreIcon" width="25px" height="25px" style="filter: invert(86%) sepia(0%) saturate(4426%) hue-rotate(164deg) brightness(74%) contrast(95%)">
+                            </div>                            
+                        </div>
+                    </div>
+                `;
+                cardContainer.appendChild(card);
+            }
+        }); 
+    </script>
+</body>
+</html>

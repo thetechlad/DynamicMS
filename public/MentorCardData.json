@@ -1,0 +1,30 @@
+[
+    {
+        "avatar": "./Images/Avatar.svg" ,
+        "name": "Shine Smith",
+        "title": "UI/UX Designer",
+        "courseCount": "18",
+        "followerCount": "1200"
+    },
+    {
+        "avatar": "./Images/Avatar.svg" ,
+        "name": "Mikel",
+        "title": "Marketer",
+        "courseCount": "24",
+        "followerCount": "900"
+    },
+    {
+        "avatar": "./Images/Avatar.svg" ,
+        "name": "Tohid golakar",
+        "title": "Android Developer",
+        "courseCount": "64",
+        "followerCount": "1590"
+    },
+    {
+        "avatar": "./Images/Avatar.svg" ,
+        "name": "Md Sakib",
+        "title": "Frontend Developer",
+        "courseCount": "85",
+        "followerCount": "3400"
+    }
+]

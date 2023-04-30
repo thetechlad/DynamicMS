@@ -1,0 +1,22 @@
+[
+    {
+        "image": "./Images/CategoryIcon.svg",
+        "title": "UI/UX Design",
+        "count": 14
+    },
+    {
+        "image": "./Images/CategoryIcon.svg",
+        "title": "Marketing",
+        "count": 24
+    },
+    {
+        "image": "./Images/CategoryIcon.svg",
+        "title": "Development",
+        "count": 126
+    },
+    {
+        "image": "./Images/CategoryIcon.svg",
+        "title": "Business",
+        "count": 213
+    }
+]

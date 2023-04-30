@@ -1,0 +1,22 @@
+{
+  "name": "dynamicms",
+  "version": "1.0.0",
+  "description": "This repository is for Dynamic MS Front-End Design to be shared with Front End Developers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thetechlad/DynamicMS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thetechlad/DynamicMS/issues"
+  },
+  "homepage": "https://github.com/thetechlad/DynamicMS#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
